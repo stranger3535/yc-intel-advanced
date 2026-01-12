@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.routers import companies, leaderboard, search, trends, chat
+from routers import companies, leaderboard, search, trends, chat
+
 
 app = FastAPI(
     title="YC Intel Advanced",
