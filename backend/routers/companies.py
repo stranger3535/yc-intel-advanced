@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from psycopg2.extras import RealDictCursor
-from backend.db import get_db
+from db import get_db
+
 
 router = APIRouter()
 
