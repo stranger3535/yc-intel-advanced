@@ -1,0 +1,4144 @@
+Company Name: DoorDash
+Domain: doordash.com
+Location: 
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: DoorDash
+Domain: doordash.com
+Location: (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51714649-1', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+
+function parseUrl(url){
+  var a = document.createElement('a');
+  a.href = url;
+  return {
+    href: a.href,
+    host: a.host || location.host,
+    port: ('0' === a.port || '' === a.port) ? port(a.protocol) : a.port,
+    hash: a.hash,
+    hostname: a.hostname || location.hostname,
+    pathname: a.pathname.charAt(0) != '/' ? '/' + a.pathname : a.pathname,
+    protocol: !a.protocol || ':' == a.protocol ? location.protocol : a.protocol,
+    search: a.search,
+    query: a.search.slice(1)
+  };
+};
+
+function canonical() {
+  var tags = document.getElementsByTagName('link');
+  for (var i = 0, tag; tag = tags[i]; i++) {
+    if (tag.getAttribute('rel') === 'canonical') {
+      return tag.getAttribute('href');
+    }
+  }
+}
+
+function canonicalPath() {
+  var canon = canonical();
+  if (!canon) return window.location.pathname;
+  return parseUrl(canon).pathname;
+}
+
+function canonicalUrl(search) {
+  var canon = canonical();
+  if (canon) return canon.indexOf('?') !== -1 ? canon : canon + search;
+  var url = window.location.href;
+  var i = url.indexOf('#');
+  return i === -1 ? url : url.slice(0, i);
+}
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: DoorDash
+Domain: doordash.com
+Location: (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51714649-1', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+
+function parseUrl(url){
+  var a = document.createElement('a');
+  a.href = url;
+  return {
+    href: a.href,
+    host: a.host || location.host,
+    port: ('0' === a.port || '' === a.port) ? port(a.protocol) : a.port,
+    hash: a.hash,
+    hostname: a.hostname || location.hostname,
+    pathname: a.pathname.charAt(0) != '/' ? '/' + a.pathname : a.pathname,
+    protocol: !a.protocol || ':' == a.protocol ? location.protocol : a.protocol,
+    search: a.search,
+    query: a.search.slice(1)
+  };
+};
+
+function canonical() {
+  var tags = document.getElementsByTagName('link');
+  for (var i = 0, tag; tag = tags[i]; i++) {
+    if (tag.getAttribute('rel') === 'canonical') {
+      return tag.getAttribute('href');
+    }
+  }
+}
+
+function canonicalPath() {
+  var canon = canonical();
+  if (!canon) return window.location.pathname;
+  return parseUrl(canon).pathname;
+}
+
+function canonicalUrl(search) {
+  var canon = canonical();
+  if (canon) return canon.indexOf('?') !== -1 ? canon : canon + search;
+  var url = window.location.href;
+  var i = url.indexOf('#');
+  return i === -1 ? url : url.slice(0, i);
+}
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: DoorDash
+Domain: doordash.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Airbnb
+Domain: airbnb.com
+Location: (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51714649-1', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+
+function parseUrl(url){
+  var a = document.createElement('a');
+  a.href = url;
+  return {
+    href: a.href,
+    host: a.host || location.host,
+    port: ('0' === a.port || '' === a.port) ? port(a.protocol) : a.port,
+    hash: a.hash,
+    hostname: a.hostname || location.hostname,
+    pathname: a.pathname.charAt(0) != '/' ? '/' + a.pathname : a.pathname,
+    protocol: !a.protocol || ':' == a.protocol ? location.protocol : a.protocol,
+    search: a.search,
+    query: a.search.slice(1)
+  };
+};
+
+function canonical() {
+  var tags = document.getElementsByTagName('link');
+  for (var i = 0, tag; tag = tags[i]; i++) {
+    if (tag.getAttribute('rel') === 'canonical') {
+      return tag.getAttribute('href');
+    }
+  }
+}
+
+function canonicalPath() {
+  var canon = canonical();
+  if (!canon) return window.location.pathname;
+  return parseUrl(canon).pathname;
+}
+
+function canonicalUrl(search) {
+  var canon = canonical();
+  if (canon) return canon.indexOf('?') !== -1 ? canon : canon + search;
+  var url = window.location.href;
+  var i = url.indexOf('#');
+  return i === -1 ? url : url.slice(0, i);
+}
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Airbnb
+Domain: airbnb.com
+Location: (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51714649-1', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+
+function parseUrl(url){
+  var a = document.createElement('a');
+  a.href = url;
+  return {
+    href: a.href,
+    host: a.host || location.host,
+    port: ('0' === a.port || '' === a.port) ? port(a.protocol) : a.port,
+    hash: a.hash,
+    hostname: a.hostname || location.hostname,
+    pathname: a.pathname.charAt(0) != '/' ? '/' + a.pathname : a.pathname,
+    protocol: !a.protocol || ':' == a.protocol ? location.protocol : a.protocol,
+    search: a.search,
+    query: a.search.slice(1)
+  };
+};
+
+function canonical() {
+  var tags = document.getElementsByTagName('link');
+  for (var i = 0, tag; tag = tags[i]; i++) {
+    if (tag.getAttribute('rel') === 'canonical') {
+      return tag.getAttribute('href');
+    }
+  }
+}
+
+function canonicalPath() {
+  var canon = canonical();
+  if (!canon) return window.location.pathname;
+  return parseUrl(canon).pathname;
+}
+
+function canonicalUrl(search) {
+  var canon = canonical();
+  if (canon) return canon.indexOf('?') !== -1 ? canon : canon + search;
+  var url = window.location.href;
+  var i = url.indexOf('#');
+  return i === -1 ? url : url.slice(0, i);
+}
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Airbnb
+Domain: airbnb.com
+Location: 
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Airbnb
+Domain: airbnb.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Coinbase
+Domain: www.coinbase.com
+Location: Coinbase: Buy, sell, and manage cryptocurrencies. | Y Combinator
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Coinbase
+Domain: www.coinbase.com
+Location: Coinbase: Buy, sell, and manage cryptocurrencies. | Y Combinator
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Coinbase
+Domain: www.coinbase.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Coinbase
+Domain: www.coinbase.com
+Location: 
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Instacart
+Domain: www.instacart.com
+Location: Paris
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Instacart
+Domain: www.instacart.com
+Location: (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51714649-1', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+
+function parseUrl(url){
+  var a = document.createElement('a');
+  a.href = url;
+  return {
+    href: a.href,
+    host: a.host || location.host,
+    port: ('0' === a.port || '' === a.port) ? port(a.protocol) : a.port,
+    hash: a.hash,
+    hostname: a.hostname || location.hostname,
+    pathname: a.pathname.charAt(0) != '/' ? '/' + a.pathname : a.pathname,
+    protocol: !a.protocol || ':' == a.protocol ? location.protocol : a.protocol,
+    search: a.search,
+    query: a.search.slice(1)
+  };
+};
+
+function canonical() {
+  var tags = document.getElementsByTagName('link');
+  for (var i = 0, tag; tag = tags[i]; i++) {
+    if (tag.getAttribute('rel') === 'canonical') {
+      return tag.getAttribute('href');
+    }
+  }
+}
+
+function canonicalPath() {
+  var canon = canonical();
+  if (!canon) return window.location.pathname;
+  return parseUrl(canon).pathname;
+}
+
+function canonicalUrl(search) {
+  var canon = canonical();
+  if (canon) return canon.indexOf('?') !== -1 ? canon : canon + search;
+  var url = window.location.href;
+  var i = url.indexOf('#');
+  return i === -1 ? url : url.slice(0, i);
+}
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Instacart
+Domain: www.instacart.com
+Location: (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51714649-1', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+
+function parseUrl(url){
+  var a = document.createElement('a');
+  a.href = url;
+  return {
+    href: a.href,
+    host: a.host || location.host,
+    port: ('0' === a.port || '' === a.port) ? port(a.protocol) : a.port,
+    hash: a.hash,
+    hostname: a.hostname || location.hostname,
+    pathname: a.pathname.charAt(0) != '/' ? '/' + a.pathname : a.pathname,
+    protocol: !a.protocol || ':' == a.protocol ? location.protocol : a.protocol,
+    search: a.search,
+    query: a.search.slice(1)
+  };
+};
+
+function canonical() {
+  var tags = document.getElementsByTagName('link');
+  for (var i = 0, tag; tag = tags[i]; i++) {
+    if (tag.getAttribute('rel') === 'canonical') {
+      return tag.getAttribute('href');
+    }
+  }
+}
+
+function canonicalPath() {
+  var canon = canonical();
+  if (!canon) return window.location.pathname;
+  return parseUrl(canon).pathname;
+}
+
+function canonicalUrl(search) {
+  var canon = canonical();
+  if (canon) return canon.indexOf('?') !== -1 ? canon : canon + search;
+  var url = window.location.href;
+  var i = url.indexOf('#');
+  return i === -1 ? url : url.slice(0, i);
+}
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Instacart
+Domain: www.instacart.com
+Location: 
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Oklo
+Domain: oklo.com
+Location: Oklo: Emission free, always on power from advanced fission power plants. | Y Combinator
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Oklo
+Domain: oklo.com
+Location: Oklo: Emission free, always on power from advanced fission power plants. | Y Combinator
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Oklo
+Domain: oklo.com
+Location: Toronto
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Oklo
+Domain: oklo.com
+Location: Santa Clara, CA
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Groww
+Domain: groww.in
+Location: Bengaluru, India
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Groww
+Domain: groww.in
+Location: Groww: Making financial services simple, transparent and delightful.  | Y Combinator
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Groww
+Domain: groww.in
+Location: Groww: Making financial services simple, transparent and delightful.  | Y Combinator
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Groww
+Domain: groww.in
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Meesho
+Domain: www.meesho.com
+Location: Bengaluru, India
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Meesho
+Domain: www.meesho.com
+Location: (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51714649-1', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+
+function parseUrl(url){
+  var a = document.createElement('a');
+  a.href = url;
+  return {
+    href: a.href,
+    host: a.host || location.host,
+    port: ('0' === a.port || '' === a.port) ? port(a.protocol) : a.port,
+    hash: a.hash,
+    hostname: a.hostname || location.hostname,
+    pathname: a.pathname.charAt(0) != '/' ? '/' + a.pathname : a.pathname,
+    protocol: !a.protocol || ':' == a.protocol ? location.protocol : a.protocol,
+    search: a.search,
+    query: a.search.slice(1)
+  };
+};
+
+function canonical() {
+  var tags = document.getElementsByTagName('link');
+  for (var i = 0, tag; tag = tags[i]; i++) {
+    if (tag.getAttribute('rel') === 'canonical') {
+      return tag.getAttribute('href');
+    }
+  }
+}
+
+function canonicalPath() {
+  var canon = canonical();
+  if (!canon) return window.location.pathname;
+  return parseUrl(canon).pathname;
+}
+
+function canonicalUrl(search) {
+  var canon = canonical();
+  if (canon) return canon.indexOf('?') !== -1 ? canon : canon + search;
+  var url = window.location.href;
+  var i = url.indexOf('#');
+  return i === -1 ? url : url.slice(0, i);
+}
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Meesho
+Domain: www.meesho.com
+Location: (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51714649-1', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+
+function parseUrl(url){
+  var a = document.createElement('a');
+  a.href = url;
+  return {
+    href: a.href,
+    host: a.host || location.host,
+    port: ('0' === a.port || '' === a.port) ? port(a.protocol) : a.port,
+    hash: a.hash,
+    hostname: a.hostname || location.hostname,
+    pathname: a.pathname.charAt(0) != '/' ? '/' + a.pathname : a.pathname,
+    protocol: !a.protocol || ':' == a.protocol ? location.protocol : a.protocol,
+    search: a.search,
+    query: a.search.slice(1)
+  };
+};
+
+function canonical() {
+  var tags = document.getElementsByTagName('link');
+  for (var i = 0, tag; tag = tags[i]; i++) {
+    if (tag.getAttribute('rel') === 'canonical') {
+      return tag.getAttribute('href');
+    }
+  }
+}
+
+function canonicalPath() {
+  var canon = canonical();
+  if (!canon) return window.location.pathname;
+  return parseUrl(canon).pathname;
+}
+
+function canonicalUrl(search) {
+  var canon = canonical();
+  if (canon) return canon.indexOf('?') !== -1 ? canon : canon + search;
+  var url = window.location.href;
+  var i = url.indexOf('#');
+  return i === -1 ? url : url.slice(0, i);
+}
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Meesho
+Domain: www.meesho.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Rigetti Computing
+Domain: rigetti.com
+Location: Berkeley, CA
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Rigetti Computing
+Domain: rigetti.com
+Location: (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51714649-1', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+
+function parseUrl(url){
+  var a = document.createElement('a');
+  a.href = url;
+  return {
+    href: a.href,
+    host: a.host || location.host,
+    port: ('0' === a.port || '' === a.port) ? port(a.protocol) : a.port,
+    hash: a.hash,
+    hostname: a.hostname || location.hostname,
+    pathname: a.pathname.charAt(0) != '/' ? '/' + a.pathname : a.pathname,
+    protocol: !a.protocol || ':' == a.protocol ? location.protocol : a.protocol,
+    search: a.search,
+    query: a.search.slice(1)
+  };
+};
+
+function canonical() {
+  var tags = document.getElementsByTagName('link');
+  for (var i = 0, tag; tag = tags[i]; i++) {
+    if (tag.getAttribute('rel') === 'canonical') {
+      return tag.getAttribute('href');
+    }
+  }
+}
+
+function canonicalPath() {
+  var canon = canonical();
+  if (!canon) return window.location.pathname;
+  return parseUrl(canon).pathname;
+}
+
+function canonicalUrl(search) {
+  var canon = canonical();
+  if (canon) return canon.indexOf('?') !== -1 ? canon : canon + search;
+  var url = window.location.href;
+  var i = url.indexOf('#');
+  return i === -1 ? url : url.slice(0, i);
+}
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Rigetti Computing
+Domain: rigetti.com
+Location: (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51714649-1', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+
+function parseUrl(url){
+  var a = document.createElement('a');
+  a.href = url;
+  return {
+    href: a.href,
+    host: a.host || location.host,
+    port: ('0' === a.port || '' === a.port) ? port(a.protocol) : a.port,
+    hash: a.hash,
+    hostname: a.hostname || location.hostname,
+    pathname: a.pathname.charAt(0) != '/' ? '/' + a.pathname : a.pathname,
+    protocol: !a.protocol || ':' == a.protocol ? location.protocol : a.protocol,
+    search: a.search,
+    query: a.search.slice(1)
+  };
+};
+
+function canonical() {
+  var tags = document.getElementsByTagName('link');
+  for (var i = 0, tag; tag = tags[i]; i++) {
+    if (tag.getAttribute('rel') === 'canonical') {
+      return tag.getAttribute('href');
+    }
+  }
+}
+
+function canonicalPath() {
+  var canon = canonical();
+  if (!canon) return window.location.pathname;
+  return parseUrl(canon).pathname;
+}
+
+function canonicalUrl(search) {
+  var canon = canonical();
+  if (canon) return canon.indexOf('?') !== -1 ? canon : canon + search;
+  var url = window.location.href;
+  var i = url.indexOf('#');
+  return i === -1 ? url : url.slice(0, i);
+}
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Rigetti Computing
+Domain: rigetti.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Dropbox
+Domain: dropbox.com
+Location: (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51714649-1', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+
+function parseUrl(url){
+  var a = document.createElement('a');
+  a.href = url;
+  return {
+    href: a.href,
+    host: a.host || location.host,
+    port: ('0' === a.port || '' === a.port) ? port(a.protocol) : a.port,
+    hash: a.hash,
+    hostname: a.hostname || location.hostname,
+    pathname: a.pathname.charAt(0) != '/' ? '/' + a.pathname : a.pathname,
+    protocol: !a.protocol || ':' == a.protocol ? location.protocol : a.protocol,
+    search: a.search,
+    query: a.search.slice(1)
+  };
+};
+
+function canonical() {
+  var tags = document.getElementsByTagName('link');
+  for (var i = 0, tag; tag = tags[i]; i++) {
+    if (tag.getAttribute('rel') === 'canonical') {
+      return tag.getAttribute('href');
+    }
+  }
+}
+
+function canonicalPath() {
+  var canon = canonical();
+  if (!canon) return window.location.pathname;
+  return parseUrl(canon).pathname;
+}
+
+function canonicalUrl(search) {
+  var canon = canonical();
+  if (canon) return canon.indexOf('?') !== -1 ? canon : canon + search;
+  var url = window.location.href;
+  var i = url.indexOf('#');
+  return i === -1 ? url : url.slice(0, i);
+}
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Dropbox
+Domain: dropbox.com
+Location: (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51714649-1', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+
+function parseUrl(url){
+  var a = document.createElement('a');
+  a.href = url;
+  return {
+    href: a.href,
+    host: a.host || location.host,
+    port: ('0' === a.port || '' === a.port) ? port(a.protocol) : a.port,
+    hash: a.hash,
+    hostname: a.hostname || location.hostname,
+    pathname: a.pathname.charAt(0) != '/' ? '/' + a.pathname : a.pathname,
+    protocol: !a.protocol || ':' == a.protocol ? location.protocol : a.protocol,
+    search: a.search,
+    query: a.search.slice(1)
+  };
+};
+
+function canonical() {
+  var tags = document.getElementsByTagName('link');
+  for (var i = 0, tag; tag = tags[i]; i++) {
+    if (tag.getAttribute('rel') === 'canonical') {
+      return tag.getAttribute('href');
+    }
+  }
+}
+
+function canonicalPath() {
+  var canon = canonical();
+  if (!canon) return window.location.pathname;
+  return parseUrl(canon).pathname;
+}
+
+function canonicalUrl(search) {
+  var canon = canonical();
+  if (canon) return canon.indexOf('?') !== -1 ? canon : canon + search;
+  var url = window.location.href;
+  var i = url.indexOf('#');
+  return i === -1 ? url : url.slice(0, i);
+}
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: Dropbox
+Domain: dropbox.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: GitLab
+Domain: gitlab.com
+Location: (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51714649-1', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+
+function parseUrl(url){
+  var a = document.createElement('a');
+  a.href = url;
+  return {
+    href: a.href,
+    host: a.host || location.host,
+    port: ('0' === a.port || '' === a.port) ? port(a.protocol) : a.port,
+    hash: a.hash,
+    hostname: a.hostname || location.hostname,
+    pathname: a.pathname.charAt(0) != '/' ? '/' + a.pathname : a.pathname,
+    protocol: !a.protocol || ':' == a.protocol ? location.protocol : a.protocol,
+    search: a.search,
+    query: a.search.slice(1)
+  };
+};
+
+function canonical() {
+  var tags = document.getElementsByTagName('link');
+  for (var i = 0, tag; tag = tags[i]; i++) {
+    if (tag.getAttribute('rel') === 'canonical') {
+      return tag.getAttribute('href');
+    }
+  }
+}
+
+function canonicalPath() {
+  var canon = canonical();
+  if (!canon) return window.location.pathname;
+  return parseUrl(canon).pathname;
+}
+
+function canonicalUrl(search) {
+  var canon = canonical();
+  if (canon) return canon.indexOf('?') !== -1 ? canon : canon + search;
+  var url = window.location.href;
+  var i = url.indexOf('#');
+  return i === -1 ? url : url.slice(0, i);
+}
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: GitLab
+Domain: gitlab.com
+Location: (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51714649-1', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('send', 'pageview');
+
+function parseUrl(url){
+  var a = document.createElement('a');
+  a.href = url;
+  return {
+    href: a.href,
+    host: a.host || location.host,
+    port: ('0' === a.port || '' === a.port) ? port(a.protocol) : a.port,
+    hash: a.hash,
+    hostname: a.hostname || location.hostname,
+    pathname: a.pathname.charAt(0) != '/' ? '/' + a.pathname : a.pathname,
+    protocol: !a.protocol || ':' == a.protocol ? location.protocol : a.protocol,
+    search: a.search,
+    query: a.search.slice(1)
+  };
+};
+
+function canonical() {
+  var tags = document.getElementsByTagName('link');
+  for (var i = 0, tag; tag = tags[i]; i++) {
+    if (tag.getAttribute('rel') === 'canonical') {
+      return tag.getAttribute('href');
+    }
+  }
+}
+
+function canonicalPath() {
+  var canon = canonical();
+  if (!canon) return window.location.pathname;
+  return parseUrl(canon).pathname;
+}
+
+function canonicalUrl(search) {
+  var canon = canonical();
+  if (canon) return canon.indexOf('?') !== -1 ? canon : canon + search;
+  var url = window.location.href;
+  var i = url.indexOf('#');
+  return i === -1 ? url : url.slice(0, i);
+}
+Tags: []
+Momentum Score: 0
+
+---
+Company Name: GitLab
+Domain: gitlab.com
+Location: London
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: BillionToOne
+Domain: www.billiontoone.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Matterport
+Domain: matterport.com
+Location: Tokyo
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Amplitude
+Domain: amplitude.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: PagerDuty
+Domain: pagerduty.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Weave
+Domain: getweave.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Ginkgo Bioworks
+Domain: ginkgobioworks.com
+Location: Sydney
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Pardes Biosciences
+Domain: www.pardesbio.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Embark Trucks
+Domain: embarktrucks.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Lucira Health
+Domain: www.lucirahealth.com
+Location: New York
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Momentus
+Domain: momentus.space
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Segment
+Domain: segment.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Algolia
+Domain: www.algolia.com
+Location: Tokyo
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Truebill
+Domain: www.truebill.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Twitch
+Domain: twitch.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: PlanGrid
+Domain: plangrid.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Bellabeat
+Domain: bellabeat.com
+Location: Sydney
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Cruise
+Domain: getcruise.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Benchling
+Domain: benchling.com
+Location: San Francisco
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Casetext
+Domain: casetext.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Bird
+Domain: bird.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Brex
+Domain: www.brex.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: The Athletic
+Domain: theathletic.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Codecademy
+Domain: codecademy.com
+Location: Berlin
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Checkr
+Domain: www.checkr.com
+Location: Paris
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Lever
+Domain: www.lever.co
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Clipboard
+Domain: www.clipboardhealth.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Heap
+Domain: heap.io
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Sendwave
+Domain: www.sendwave.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Deel
+Domain: www.deel.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Clever
+Domain: clever.com
+Location: London
+Tags: ['AI', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Caper
+Domain: www.caper.ai
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: EquipmentShare
+Domain: www.equipmentshare.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Reddit
+Domain: reddit.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Fivestars
+Domain: fivestars.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Machine Zone
+Domain: www.mz.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Faire
+Domain: www.faire.com
+Location: Sydney
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Fivetran
+Domain: fivetran.com
+Location: Mumbai
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Optimizely
+Domain: optimizely.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Flexport
+Domain: www.flexport.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: WePay
+Domain: wepay.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Weebly
+Domain: weebly.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Flock Safety
+Domain: www.flocksafety.com
+Location: Tokyo
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Sqreen
+Domain: www.sqreen.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: NURX
+Domain: www.nurx.com
+Location: Paris
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Go1
+Domain: go1.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: CoreOS
+Domain: coreos.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Bear Flag Robotics
+Domain: bearflagrobotics.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: GOAT Group
+Domain: www.goatgroup.com
+Location: San Francisco
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Heroku
+Domain: heroku.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: GrubMarket
+Domain: grubmarket.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: HelloSign
+Domain: www.hellosign.com
+Location: Singapore
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Zenefits
+Domain: zenefits.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Gusto
+Domain: gusto.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Honeylove
+Domain: www.honeylove.com
+Location: Paris
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Modern Fertility
+Domain: www.modernfertility.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Cognito
+Domain: cognitohq.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: OpenInvest
+Domain: www.openinvest.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Mixpanel
+Domain: mixpanel.com
+Location: San Francisco
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Paystack
+Domain: www.paystack.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Moxion Power Co.
+Domain: www.moxionpower.com
+Location: London
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: DrChrono
+Domain: www.drchrono.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: OMGPop
+Domain: omgpop.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Newfront
+Domain: www.newfront.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: North
+Domain: www.bynorth.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Nowports
+Domain: nowports.com
+Location: Toronto
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Odeko
+Domain: www.odeko.com
+Location: Sydney
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: GitPrime
+Domain: www.gitprime.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Proxy
+Domain: proxy.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: FutureAdvisor
+Domain: futureadvisor.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Podium
+Domain: podium.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Rappi
+Domain: www.rappi.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Razorpay
+Domain: razorpay.com
+Location: Tokyo
+Tags: ['AI', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Rippling
+Domain: rippling.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Scale AI
+Domain: scale.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Scentbird
+Domain: www.scentbird.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Scribd
+Domain: scribd.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: ShipBob
+Domain: shipbob.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: SmartAsset
+Domain: smartasset.com
+Location: San Francisco
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Stripe
+Domain: stripe.com
+Location: New York
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Wave
+Domain: wave.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Webflow
+Domain: webflow.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Whatnot
+Domain: www.whatnot.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Zapier
+Domain: zapier.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Zepto
+Domain: www.zeptonow.com
+Location: Paris
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Focal Systems
+Domain: www.focal.systems
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Mio
+Domain: m.io
+Location: Sydney
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Daily
+Domain: daily.co
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Petcube
+Domain: petcube.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Outschool
+Domain: outschool.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Mason
+Domain: www.bymason.com
+Location: London
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: MagicBus
+Domain: www.magicbus.io
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Tovala
+Domain: www.tovala.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: iSono Health
+Domain: www.isonohealth.com
+Location: Berlin
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: GetAccept
+Domain: www.getaccept.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Chatfuel
+Domain: chatfuel.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Yardbook
+Domain: www.yardbook.com
+Location: Sydney
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: GoCardless
+Domain: gocardless.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Stealth Worker
+Domain: www.stealthworker.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Deepgram
+Domain: www.deepgram.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: SOUNDBOKS
+Domain: soundboks.com
+Location: London
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Lattice
+Domain: lattice.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Mux
+Domain: mux.com
+Location: Tokyo
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Human Interest
+Domain: humaninterest.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Flirtey (SkyDrop)
+Domain: www.flirtey.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Eight Sleep
+Domain: eightsleep.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Instawork
+Domain: instawork.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Cofactor Genomics
+Domain: cofactorgenomics.com
+Location: Mumbai
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Click & Grow
+Domain: www.clickandgrow.com
+Location: San Francisco
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Bitmovin
+Domain: bitmovin.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: TetraScience
+Domain: www.tetrascience.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: The Ticket Fairy
+Domain: www.ticketfairy.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Font Awesome
+Domain: fontawesome.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: 80,000 Hours
+Domain: 80000hours.org
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Xendit
+Domain: www.xendit.co
+Location: Paris
+Tags: ['AI', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Shred Video
+Domain: shredvideo.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Shape (ShapeScale)
+Domain: shapescale.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: RedCarpetUp
+Domain: redcarpetup.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Plate IQ
+Domain: plateiq.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: PickTrace
+Domain: picktrace.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Fountain
+Domain: fountain.com
+Location: London
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Microhealth
+Domain: microhealth.com
+Location: Singapore
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Zeplin
+Domain: zeplin.io
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Markhor
+Domain: markhor.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Circle Medical
+Domain: circlemedical.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: GiveCampus
+Domain: go.givecampus.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Drip Capital
+Domain: dripcapital.com
+Location: Sydney
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Chaldal
+Domain: chaldal.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Clerky
+Domain: www.clerky.com
+Location: San Francisco
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Bodyport
+Domain: bodyport.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Verge Genomics
+Domain: vergegenomics.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Thrive Agritech
+Domain: www.thriveagritech.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Tesorio
+Domain: www.tesorio.com
+Location: Tokyo
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: AgileMD
+Domain: agilemd.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Reach
+Domain: reachpower.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: SunFarmer
+Domain: sunfarmer.org
+Location: Toronto
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Confident LIMS
+Domain: confidentlims.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Branch8
+Domain: www.branch8.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Heroic Labs
+Domain: heroiclabs.com
+Location: San Francisco
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: SnapMagic
+Domain: www.snapmagic.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Scope AR
+Domain: scopear.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: PartnerStack
+Domain: partnerstack.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Assembly
+Domain: asm.co
+Location: Tokyo
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Gemnote
+Domain: gemnote.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: New Story
+Domain: newstoryhomes.org
+Location: Paris
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Ironclad
+Domain: ironcladapp.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Leaders In Tech
+Domain: leadersintech.org
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: teaBOT
+Domain: teaBOT.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Teleport
+Domain: goteleport.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Lugg
+Domain: lugg.com
+Location: New York
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Shasqi
+Domain: None
+Location: London
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Mashgin
+Domain: mashgin.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: NimbleRx
+Domain: nimblerx.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Quartzy
+Domain: www.quartzy.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Replika
+Domain: replika.ai
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Tara AI
+Domain: www.tara.ai
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Flip
+Domain: justflip.com
+Location: Sydney
+Tags: ['AI', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: X-Zell
+Domain: www.x-zell.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Zenflow
+Domain: zenflow.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Tab
+Domain: www.tab.travel
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Streak
+Domain: streak.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Meadow
+Domain: getmeadow.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Level Frames
+Domain: levelframes.com
+Location: Tokyo
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Industrial Microbes
+Domain: imicrobes.com
+Location: Berlin
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Giveffect
+Domain: giveffect.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: eBrandvalue
+Domain: www.ebrandvalue.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Quantierra
+Domain: quantierra.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Cleanly
+Domain: cleanly.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Resolve
+Domain: www.resolvebim.com
+Location: San Francisco
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Makrwatch
+Domain: www.makrwatch.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: TeamNote
+Domain: teamnoteapp.com
+Location: London
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Tempo
+Domain: tempo.fit
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: SIRUM
+Domain: sirum.org
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Sails Co.
+Domain: sailsjs.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: ReadMe
+Domain: readme.com
+Location: Paris
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: BuildScience
+Domain: www.buildscience.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Platzi
+Domain: platzi.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Labdoor
+Domain: labdoor.com
+Location: Mumbai
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: GiveMeTap
+Domain: givemetap.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Bankjoy
+Domain: bankjoy.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Zeitview
+Domain: www.zeitview.com
+Location: London
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: The Human Utility
+Domain: www.detroitwaterproject.org
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Democracy Earth
+Domain: democracy.earth
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: OneSignal
+Domain: onesignal.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Numerion Labs
+Domain: www.numerionlabs.ai
+Location: Paris
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Bright
+Domain: www.thinkbright.mx
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Magic
+Domain: getmagic.com
+Location: Sydney
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Mezmo
+Domain: www.mezmo.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Akido Labs
+Domain: akidolabs.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Qventus
+Domain: qventus.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Bayes Impact
+Domain: bayesimpact.org
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Helion Energy
+Domain: helionenergy.com
+Location: Singapore
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: HackerRank
+Domain: hackerrank.com
+Location: Tokyo
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Front
+Domain: front.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Apollo
+Domain: apollographql.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Roomstorm
+Domain: roomstorm.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Hive
+Domain: www.hive.co
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Tenjin
+Domain: www.tenjin.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: SpotAngels
+Domain: www.spotangels.com
+Location: San Francisco
+Tags: ['AI', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: UserGems
+Domain: www.usergems.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: SFOX
+Domain: sfox.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: PicnicHealth
+Domain: picnichealth.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Permutive
+Domain: permutive.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Alchemy
+Domain: www.alchemynano.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: MTailor
+Domain: mtailor.com
+Location: Paris
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: MetricWire
+Domain: metricwire.com
+Location: Toronto
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Protocol Labs
+Domain: protocol.ai
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Greentoe
+Domain: greentoe.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Hyperpad
+Domain: www.hyperpad.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Flaviar
+Domain: flaviar.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Clear
+Domain: clear.in
+Location: London
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Billforward
+Domain: www.billforward.io
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Backpack
+Domain: backpackbang.com
+Location: Tokyo
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Immunity Project
+Domain: immunityproject.org
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Dyspatch
+Domain: www.dyspatch.io
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: OpenCurriculum
+Domain: opencurriculum.org
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: MixerBox
+Domain: mixerbox.com
+Location: Sydney
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Y Combinator
+Domain: www.ycombinator.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: GBatteries
+Domain: www.gbatteries.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Zinc
+Domain: zinc.com
+Location: New York
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Zidisha
+Domain: www.zidisha.org
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: TrueVault
+Domain: www.truevault.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Guesty
+Domain: www.guesty.com
+Location: Tokyo
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Snapdocs
+Domain: snapdocs.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Medmonk
+Domain: medmonk.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Shoobs
+Domain: shoobs.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Pushbullet
+Domain: www.pushbullet.com
+Location: Sydney
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Povio
+Domain: povio.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: PiinPoint
+Domain: piinpoint.com
+Location: San Francisco
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: One Degree
+Domain: 1degree.org
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: MBX
+Domain: us.memebox.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Emailio
+Domain: emailio.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: DevCycle
+Domain: devcycle.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: CodeNow
+Domain: codenow.org
+Location: Berlin
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: CodeCombat
+Domain: codecombat.com
+Location: Paris
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Noora Health
+Domain: noorahealth.org
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Cambly
+Domain: www.cambly.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: AptDeco
+Domain: www.aptdeco.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: CareMessage
+Domain: caremessage.org
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Ambition
+Domain: ambition.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: AirHelp
+Domain: www.airhelp.com
+Location: London
+Tags: ['AI', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: 42
+Domain: 42technologies.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: True Link
+Domain: www.truelinkfinancial.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Reebee
+Domain: reebee.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Lob
+Domain: lob.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Panorama Education
+Domain: www.panoramaed.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Cratejoy
+Domain: cratejoy.com
+Location: Sydney
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Estimote, Inc.
+Domain: estimote.com
+Location: Mumbai
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: EasyPost
+Domain: easypost.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Asseta
+Domain: www.asseta.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Per Vices
+Domain: www.pervices.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: 7cups
+Domain: 7cups.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Watsi
+Domain: watsi.org
+Location: Tokyo
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Goldbelly
+Domain: www.goldbelly.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Wevorce
+Domain: wevorce.com
+Location: Paris
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Wefunder
+Domain: wefunder.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: SimplyInsured
+Domain: simplyinsured.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: CircuitHub
+Domain: circuithub.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Experiment
+Domain: experiment.com
+Location: San Francisco
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: RADAR
+Domain: goradar.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Lollipuff
+Domain: lollipuff.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Strikingly
+Domain: www.strikingly.com
+Location: Singapore
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: InfluxData
+Domain: influxdata.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Etleap
+Domain: etleap.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Cheetah
+Domain: gocheetah.com
+Location: Paris
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Lawdingo
+Domain: lawdingo.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Padlet
+Domain: padlet.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: BuildZoom
+Domain: www.buildzoom.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: CircuitLab
+Domain: www.circuitlab.com
+Location: San Francisco
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: StyleUp
+Domain: thestyleup.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: 9gag
+Domain: 9gag.com
+Location: London
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Svbtle
+Domain: svbtle.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Plivo
+Domain: plivo.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Double Robotics
+Domain: doublerobotics.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Vastrm
+Domain: vastrm.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Flightfox
+Domain: flightfox.com
+Location: Toronto
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: BackerKit
+Domain: backerkit.com
+Location: Sydney
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Submittable
+Domain: www.submittable.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: NewsBlur
+Domain: www.newsblur.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: OctaveWealth
+Domain: octavewealth.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Upwave
+Domain: www.upwave.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Eligible
+Domain: eligible.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: FundersClub
+Domain: fundersclub.com
+Location: Tokyo
+Tags: ['AI', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Zentail
+Domain: zentail.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Mattermost
+Domain: mattermost.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: HealthSherpa
+Domain: healthsherpa.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Human Dx
+Domain: humandx.org
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Mth Sense
+Domain: www.mthsense.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Rainforest
+Domain: www.rainforestqa.com
+Location: San Francisco
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Screenleap
+Domain: screenleap.com
+Location: New York
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Buxfer
+Domain: www.buxfer.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Virtualmin
+Domain: virtualmin.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Blue Frog Gaming
+Domain: bluefroggaming.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: CleverDeck
+Domain: cleverdeck.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Chasi
+Domain: chasi.co
+Location: Paris
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: o11
+Domain: o11.ai
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Arzule
+Domain: www.arzule.com
+Location: Sydney
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Bubble Lab
+Domain: bubblelab.ai
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Pocket
+Domain: heypocket.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Constellation
+Domain: constellation-io.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: AxionOrbital Space
+Domain: axionorbital.space
+Location: London
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Caretta
+Domain: www.caretta.so
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Ressl AI
+Domain: ressl.ai
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Patientdesk.ai
+Domain: patientdesk.ai
+Location: Berlin
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Prana
+Domain: pranahealth.io
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Pax Historia
+Domain: www.paxhistoria.co
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: OctaPulse
+Domain: www.tryoctapulse.com
+Location: Sydney
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Luel
+Domain: luel.ai
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Skillsync
+Domain: skillsync.wiki
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: MirageDoodle, Inc.
+Domain: miragedoodle.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: 21st
+Domain: 21st.dev
+Location: London
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Avoice
+Domain: avoice.co
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Bujo AI
+Domain: www.getbujo.com
+Location: Tokyo
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Burt
+Domain: www.trainburt.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: LegalOS
+Domain: www.legalos.ai
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Lexius
+Domain: www.lexius.ai
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Sonarly
+Domain: sonarly.dev
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Didit
+Domain: didit.me
+Location: Mumbai
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Panta
+Domain: pantainsure.com
+Location: San Francisco
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Hlabs
+Domain: www.hlaboratories.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Valgo
+Domain: valgo.dev
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Sarah AI
+Domain: hellosarah.ai
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Mantis Biotechnology
+Domain: mantisbiotech.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Haladir
+Domain: www.haladir.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: JSX Tool
+Domain: jsxtool.com
+Location: Paris
+Tags: ['AI', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Zephyr Fusion
+Domain: www.zephyrfusion.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Mayflower
+Domain: mayflowervisa.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: item
+Domain: item.app
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Rivet
+Domain: rivet.design
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Openroll
+Domain: www.openroll.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Fixpoint
+Domain: fixpoint.co
+Location: London
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Bear
+Domain: usebear.ai
+Location: Singapore
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Moss
+Domain: usemoss.dev
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Zarna
+Domain: www.zarnaai.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: MarkIt
+Domain: markittrade.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Dome
+Domain: domeapi.io
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Voltair
+Domain: voltairlabs.com
+Location: Sydney
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Clicks
+Domain: goclicks.ai
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Fastshot
+Domain: www.fastshot.ai
+Location: San Francisco
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Shoptiques
+Domain: shoptiques.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Claybird
+Domain: claybird.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: LunaBill
+Domain: lunabill.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Axial Composites Industries
+Domain: www.axialcomposite.com
+Location: Tokyo
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Velvet
+Domain: velvet.video
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: DiligenceSquared
+Domain: diligencesquared.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Amera
+Domain: amerahealthsolutions.com
+Location: Toronto
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Forge Robotics
+Domain: forge-robotics.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Stratus Aviation
+Domain: getstratus.ai
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Bluma
+Domain: www.getbluma.com
+Location: San Francisco
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Lightberry
+Domain: lightberry.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: The Hog
+Domain: thehog.ai
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Telemetron
+Domain: www.telemetron.ai
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Boom AI
+Domain: useboom.ai
+Location: Tokyo
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Freeport Markets
+Domain: www.freeportmarkets.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Miniswap
+Domain: miniswap.gg
+Location: Paris
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Rovi Health
+Domain: www.rovi.health
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Castari
+Domain: castari.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Jarmin
+Domain: jarmin.ai
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Exonic
+Domain: exonic.ai
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Lemma
+Domain: www.uselemma.ai
+Location: New York
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Mantle
+Domain: www.mantle.work
+Location: London
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Karumi
+Domain: www.karumi.ai
+Location: 
+Tags: []
+Momentum Score: 20
+
+---
+Company Name: Karumi
+Domain: www.karumi.ai
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 20
+
+---
+Company Name: Icarus
+Domain: www.icarus.one
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Sava
+Domain: www.savahq.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Waffer
+Domain: waffer.ai
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Denki
+Domain: denki.ai
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Arcten
+Domain: arcten.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Metorial
+Domain: metorial.com
+Location: Sydney
+Tags: ['AI', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Kalpa Labs
+Domain: kalpalabs.ai
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Absurd
+Domain: absurd.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Clad Labs
+Domain: cladlabs.ai
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Automax.ai
+Domain: automax.ai
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Specific
+Domain: specific.dev
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Primer
+Domain: www.startprimer.com
+Location: Tokyo
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Narrative
+Domain: www.narrative-sports.com
+Location: Berlin
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Crunched
+Domain: usecrunched.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Lua Global Inc
+Domain: heylua.ai
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Spatial AI
+Domain: spatial-ai.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Sourcebot
+Domain: www.sourcebot.dev
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Zalos
+Domain: www.zalos.ai
+Location: San Francisco
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: HireGlide
+Domain: www.hireglide.ai
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Aside
+Domain: asidehq.com
+Location: London
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Scott AI
+Domain: tryscott.ai
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Everest
+Domain: everestmanagedai.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Expected Parrot
+Domain: www.expectedparrot.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Imagine AI
+Domain: imagineai.me
+Location: Paris
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Anto Biosciences
+Domain: www.anto.bio
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Patent Watch
+Domain: www.patentwatch.ai
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: s2.dev
+Domain: s2.dev
+Location: Mumbai
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Tornyol
+Domain: tornyol.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Nucleo
+Domain: nucleoresearch.com
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Leadbay
+Domain: leadbay.ai
+Location: London
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Pixley AI
+Domain: pixleyai.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Cortex AI
+Domain: cortexrobot.ai
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Inspector
+Domain: www.tryinspector.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Thesis
+Domain: thesislabs.ai
+Location: Paris
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Oxus
+Domain: oxus-ai.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Play Health
+Domain: playhealth.com
+Location: Sydney
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Casey
+Domain: www.meetcasey.ai
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Selfin
+Domain: selfin.app
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Compyle
+Domain: compyle.ai
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Lexi
+Domain: getlexi.io
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Codyco
+Domain: www.codyco.ai
+Location: Singapore
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: ComplyDo
+Domain: www.complydo.io
+Location: Tokyo
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Bravi
+Domain: www.bravi.app
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Rovr
+Domain: www.withrovr.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Sunflower
+Domain: sunflowersober.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Captain
+Domain: runcaptain.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Redapto
+Domain: www.redapto.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Articulate
+Domain: usearticulate.com
+Location: San Francisco
+Tags: ['AI', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Aleph Lab
+Domain: alephlab.ai
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Logical
+Domain: trylogical.ai
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Agentic Fabriq
+Domain: www.agenticfabriq.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Travo
+Domain: www.travoai.com
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Tensr
+Domain: tensr.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Kestrel AI
+Domain: usekestrel.ai
+Location: Paris
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Sanctum
+Domain: withsanctum.com
+Location: Toronto
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: LogosGuard
+Domain: logosguard.com
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Sciloop
+Domain: sciloop.dev
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Multifactor
+Domain: multifactor.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Allus AI
+Domain: allus.ai
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Unsiloed AI
+Domain: www.unsiloed.ai
+Location: London
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: SF Tensor
+Domain: sf-tensor.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: AnswerThis
+Domain: answerthis.io
+Location: Tokyo
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Nivara
+Domain: getnivara.com
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Lakonia
+Domain: lakonia.us.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: SellRaze
+Domain: sellraze.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Mod AI
+Domain: usemod.ai
+Location: Sydney
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Semble AI
+Domain: www.sembleai.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Flick
+Domain: flick.art
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: hillclimb
+Domain: hillclimb.com
+Location: New York
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: AtlasGrid
+Domain: atlasgrid.ai
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Wardstone
+Domain: www.wardstone.space
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Nessie
+Domain: nessielabs.com
+Location: Tokyo
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Hypercubic
+Domain: www.hypercubic.ai
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Cranston AI
+Domain: www.cranstonai.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Questom
+Domain: www.questom.ai
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Velum Labs
+Domain: www.velum-labs.com
+Location: Sydney
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Veria Labs
+Domain: verialabs.com
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Iris
+Domain: textiris.com
+Location: San Francisco
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: PlayVision
+Domain: withplayvision.ai
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Koyal
+Domain: koyal.ai
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Kaigo Health
+Domain: www.kaigohealth.ai
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Norra
+Domain: www.norra.io
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Soren
+Domain: soren-ai.com
+Location: Berlin
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Lunavo
+Domain: lunavo.ai
+Location: Paris
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Dari
+Domain: usedari.com
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: The Context Company
+Domain: thecontext.company
+Location: Sydney
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Sorce
+Domain: sorce.jobs
+Location: Mumbai
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Caddy
+Domain: trycaddy.ai
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Alt-X
+Domain: alt-x.co
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Locus
+Domain: paywithlocus.com
+Location: London
+Tags: ['AI', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Deeptrace
+Domain: deeptrace.com
+Location: Singapore
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Aspect
+Domain: aspect.inc
+Location: Tokyo
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Scoop
+Domain: scooplabs.ai
+Location: Berlin
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Hyperspell
+Domain: hyperspell.com
+Location: Paris
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Bolna AI
+Domain: bolna.ai
+Location: Toronto
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Nexus
+Domain: agent.nexus
+Location: Sydney
+Tags: ['SaaS', 'FinTech']
+Momentum Score: 0
+
+---
+Company Name: Sylvian
+Domain: sylvian.ai
+Location: Mumbai
+Tags: ['AI', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Zavo
+Domain: zavopay.com
+Location: San Francisco
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: MOVEdot
+Domain: www.movedot.ai
+Location: New York
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---
+Company Name: Parrot
+Domain: parrotapp.com
+Location: London
+Tags: ['SaaS', 'E-commerce']
+Momentum Score: 0
+
+---

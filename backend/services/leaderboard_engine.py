@@ -1,6 +1,6 @@
 # backend/services/leaderboard_engine.py
 
-from db import get_db
+from backend.db import get_db
 
 
 def get_leaderboard_service():

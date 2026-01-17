@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 from psycopg2.extras import RealDictCursor
-from db import get_db
+from backend.db import get_db
 from fastapi import APIRouter
-from services.trend_engine import get_trends_service
+from backend.services.trend_engine import get_trends_service
 
 router = APIRouter()
 

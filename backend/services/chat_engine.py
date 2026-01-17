@@ -1,8 +1,8 @@
 # backend/services/chat_engine.py
 
-from services.search_engine import search_companies_service
-from services.trend_engine import get_trends_service
-from services.leaderboard_engine import get_leaderboard_service
+from backend.services.search_engine import search_companies_service
+from backend.services.trend_engine import get_trends_service
+from backend.services.leaderboard_engine import get_leaderboard_service
 
 
 def answer_question(question: str):

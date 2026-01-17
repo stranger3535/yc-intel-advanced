@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from services.chat_engine import answer_question
 
+from backend.rag.rag_pipeline import answer_question
 
 router = APIRouter(
     prefix="/api/chat",
@@ -11,12 +11,21 @@ router = APIRouter(
 class ChatRequest(BaseModel):
     question: str
 
+class ChatResponse(BaseModel):
+    answer: str
 
-@router.post("/")
+@router.post("/", response_model=ChatResponse)
 def chat(req: ChatRequest):
     question = req.question.strip()
 
     if not question:
-        raise HTTPException(status_code=400, detail="Question cannot be empty")
+        raise HTTPException(
+            status_code=400,
+            detail="Question cannot be empty"
+        )
 
-    return answer_question(question)
+    answer = answer_question(question)
+
+    return {
+        "answer": answer
+    }
