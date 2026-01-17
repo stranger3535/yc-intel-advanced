@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from backend.rag.rag_pipeline import answer_question
+import os
 
 router = APIRouter(
     prefix="/api/chat",
@@ -11,8 +11,7 @@ class ChatRequest(BaseModel):
     question: str
 
 class ChatResponse(BaseModel):
-    answer: str
-    sources: list = []   # optional but future-proof
+    answer: str  # MUST be string
 
 @router.post("/", response_model=ChatResponse)
 def chat(req: ChatRequest):
@@ -21,17 +20,17 @@ def chat(req: ChatRequest):
     if not question:
         raise HTTPException(status_code=400, detail="Question cannot be empty")
 
-    result = answer_question(question)
+    # LLM disabled (free tier safe mode)
+    if not os.getenv("GEMINI_API_KEY"):
+        return ChatResponse(
+            answer=(
+                "LLM is currently disabled.\n\n"
+                "This demo runs on Render free tier without Gemini enabled.\n"
+                "You can still explore YC data via search, trends, and leaderboards."
+            )
+        )
 
- 
-    if isinstance(result, dict):
-        return {
-            "answer": result.get("answer", "No answer available."),
-            "sources": result.get("sources", [])
-        }
-
-    # If result is plain string
-    return {
-        "answer": str(result),
-        "sources": []
-    }
+    # Placeholder for future Gemini logic
+    return ChatResponse(
+        answer="Gemini is enabled, but response logic is not implemented yet."
+    )
