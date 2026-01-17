@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, Query
 from psycopg2.extras import RealDictCursor
-from backend.db import get_db
-from backend.services.search_engine import search_companies_service
+from db import get_db
+from services.search_engine import search_companies_service
 
 
 router = APIRouter()

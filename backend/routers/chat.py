@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
-from backend.rag.rag_pipeline import answer_question
+from rag.rag_pipeline import answer_question
 
 router = APIRouter(
     prefix="/api/chat",

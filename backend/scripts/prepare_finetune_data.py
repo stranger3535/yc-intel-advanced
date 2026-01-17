@@ -3,7 +3,7 @@ import os
 import sys
 from dotenv import load_dotenv
 
-# Fix import path
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
 
@@ -15,7 +15,7 @@ OUTPUT_PATH = os.path.join(BASE_DIR, "finetune_data.jsonl")
 
 
 def main():
-    # --- Get DB connection safely ---
+  
     db_gen = get_db()
 
     if hasattr(db_gen, "__next__"):
@@ -25,7 +25,6 @@ def main():
 
     cur = db.cursor()
 
-    # --- Fetch only GOOD quality data ---
     cur.execute("""
         SELECT
             c.name,

@@ -2,7 +2,6 @@ import sys
 import os
 from dotenv import load_dotenv
 
-# Fix import path
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
 
@@ -12,7 +11,7 @@ load_dotenv()
 
 
 def export_data():
-    # Handle get_db() as generator or direct connection
+   
     db_gen = get_db()
     db = next(db_gen) if hasattr(db_gen, "__next__") else db_gen
     cur = db.cursor()

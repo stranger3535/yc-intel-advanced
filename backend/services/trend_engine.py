@@ -1,4 +1,4 @@
-from backend.db import get_db
+from db import get_db
 
 def get_trends_service():
     conn = get_db()

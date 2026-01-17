@@ -1,5 +1,5 @@
 import subprocess
-from backend.rag.retriever import retrieve_context
+from rag.retriever import retrieve_context
 
 OLLAMA_PATH = r"C:\Users\abhij\AppData\Local\Programs\Ollama\ollama.exe"
 
