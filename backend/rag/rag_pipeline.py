@@ -1,46 +1,23 @@
-import subprocess
+# backend/rag/rag_pipeline.py
 from rag.retriever import retrieve_context
+from services.gemini_client import generate_answer
 
-OLLAMA_PATH = r"C:\Users\abhij\AppData\Local\Programs\Ollama\ollama.exe"
+def answer_question(question: str) -> dict:
+    context = retrieve_context(question)
 
-def answer_question(question: str) -> str:
-    # 1. Retrieve context
-    contexts = retrieve_context(question)
-
-    if not contexts:
-        context_text = "No relevant company data found."
-    else:
-        context_text = "\n\n".join(
-            f"- {c['name']} ({c.get('domain','')}): {c.get('description','')}"
-            for c in contexts
-        )
-
-    # 2. Build prompt
     prompt = f"""
-You are an analyst answering questions about Y Combinator companies.
+You are an analyst for Y Combinator data.
 
 Context:
-{context_text}
+{context}
 
 Question:
 {question}
-
-Answer clearly and concisely.
 """
 
-    # 3. Call Ollama
-    try:
-        result = subprocess.run(
-            [OLLAMA_PATH, "run", "llama3"],
-            input=prompt,
-            capture_output=True,
-            text=True,
-            timeout=60
-        )
-    except Exception as e:
-        return f"Ollama execution failed: {e}"
+    answer = generate_answer(prompt)
 
-    if result.returncode != 0:
-        return f"Ollama error: {result.stderr}"
-
-    return result.stdout.strip()
+    return {
+        "answer": answer,
+        "sources": context,
+    }

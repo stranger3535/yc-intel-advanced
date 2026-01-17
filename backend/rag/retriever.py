@@ -1,28 +1,30 @@
-import json
-import faiss
-import numpy as np
-from sentence_transformers import SentenceTransformer
+# backend/rag/retriever.py
+import os
 
-# ------------------ CONFIG ------------------
-INDEX_PATH = "backend/rag/vector_store.faiss"
-META_PATH = "backend/rag/metadata.json"
-TOP_K = 5
+FAISS_ENABLED = os.getenv("USE_FAISS", "false").lower() == "true"
 
-# Load model + index once
-model = SentenceTransformer("all-MiniLM-L6-v2")
-index = faiss.read_index(INDEX_PATH)
+def retrieve_context(question: str, top_k: int = 5):
+    if not FAISS_ENABLED:
+        # Fallback: no vector search
+        return []
 
-with open(META_PATH, "r", encoding="utf-8") as f:
-    metadata = json.load(f)
+    try:
+        import faiss
+        from sentence_transformers import SentenceTransformer
+        import json
+        import numpy as np
 
+        model = SentenceTransformer("all-MiniLM-L6-v2")
+        index = faiss.read_index("rag/vector_store.faiss")
 
-def retrieve_context(question: str, top_k: int = TOP_K) -> list[str]:
-    query_embedding = model.encode([question]).astype("float32")
-    distances, indices = index.search(query_embedding, top_k)
+        with open("rag/metadata.json", "r", encoding="utf-8") as f:
+            metadata = json.load(f)
 
-    results = []
-    for idx in indices[0]:
-        if idx < len(metadata):
-            results.append(metadata[idx])
+        query_embedding = model.encode([question]).astype("float32")
+        distances, indices = index.search(query_embedding, top_k)
 
-    return results
+        return [metadata[i] for i in indices[0] if i < len(metadata)]
+
+    except Exception as e:
+        print("FAISS disabled or failed:", e)
+        return []
