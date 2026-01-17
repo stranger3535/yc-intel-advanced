@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 import os
+import google.generativeai as genai
 
 router = APIRouter(prefix="/api/chat", tags=["Chat"])
 
@@ -10,31 +11,28 @@ class ChatRequest(BaseModel):
 class ChatResponse(BaseModel):
     answer: str
 
-
 @router.post("/", response_model=ChatResponse)
 def chat(req: ChatRequest):
     question = req.question.strip()
-
     if not question:
         raise HTTPException(status_code=400, detail="Question cannot be empty")
 
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        return {
+            "answer": "Gemini API key is not configured on the server."
+        }
 
-    # (Render cannot run Ollama anyway)
-    if not os.getenv("OLLAMA_ENABLED"):
-        return ChatResponse(
-            answer=(
-                "LLM is disabled on the deployed server.\n\n"
-                "This project demonstrates:\n"
-                "- YC data APIs\n"
-                "- Chat interface\n"
-                "- Deployment architecture\n\n"
-                "LLM responses work locally with Ollama."
-            )
-        )
+    genai.configure(api_key=api_key)
 
-    # (This part will ONLY work locally, not on Render)
+    model = genai.GenerativeModel("gemini-1.5-flash")
+
     try:
-        # placeholder for your local ollama call
-        return ChatResponse(answer="Ollama response placeholder")
+        response = model.generate_content(question)
+        return {
+            "answer": response.text or "No response generated."
+        }
     except Exception as e:
-        return ChatResponse(answer=f"Error: {str(e)}")
+        return {
+            "answer": f"Gemini error: {str(e)}"
+        }
