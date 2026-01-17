@@ -1,7 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from sqlalchemy import text
-from backend.db import engine
+import os
 
 router = APIRouter(prefix="/api/chat", tags=["Chat"])
 
@@ -14,58 +13,28 @@ class ChatResponse(BaseModel):
 
 @router.post("/", response_model=ChatResponse)
 def chat(req: ChatRequest):
-    q = req.question.lower().strip()
+    question = req.question.strip()
 
-    if not q:
-        raise HTTPException(status_code=400, detail="Empty question")
+    if not question:
+        raise HTTPException(status_code=400, detail="Question cannot be empty")
 
-    # 1️⃣ Top fast-growing YC startups
-    if "fast" in q and "growing" in q:
-        sql = """
-        SELECT name, momentum_score
-        FROM companies
-        ORDER BY momentum_score DESC
-        LIMIT 5
-        """
-        rows = engine.execute(text(sql)).fetchall()
+
+    # (Render cannot run Ollama anyway)
+    if not os.getenv("OLLAMA_ENABLED"):
         return ChatResponse(
-            answer="\n".join([f"{r[0]} (score {r[1]})" for r in rows])
+            answer=(
+                "LLM is disabled on the deployed server.\n\n"
+                "This project demonstrates:\n"
+                "- YC data APIs\n"
+                "- Chat interface\n"
+                "- Deployment architecture\n\n"
+                "LLM responses work locally with Ollama."
+            )
         )
 
-    # 2️⃣ Companies working on AI
-    if "ai" in q:
-        sql = """
-        SELECT name, tags
-        FROM companies
-        WHERE tags ILIKE '%AI%'
-        LIMIT 5
-        """
-        rows = engine.execute(text(sql)).fetchall()
-        return ChatResponse(
-            answer="\n".join([f"{r[0]} – {r[1]}" for r in rows])
-        )
-
-    # 3️⃣ Stage changes
-    if "stage" in q:
-        sql = """
-        SELECT name, stage
-        FROM companies
-        ORDER BY updated_at DESC
-        LIMIT 5
-        """
-        rows = engine.execute(text(sql)).fetchall()
-        return ChatResponse(
-            answer="\n".join([f"{r[0]} → {r[1]}" for r in rows])
-        )
-
-    # 4️⃣ Fallback
-    return ChatResponse(
-        answer=(
-            "I can answer questions about:\n"
-            "- Fast-growing YC startups\n"
-            "- AI companies\n"
-            "- Stage changes\n"
-            "- YC trends\n\n"
-            "Try one of the example questions above."
-        )
-    )
+    # (This part will ONLY work locally, not on Render)
+    try:
+        # placeholder for your local ollama call
+        return ChatResponse(answer="Ollama response placeholder")
+    except Exception as e:
+        return ChatResponse(answer=f"Error: {str(e)}")
