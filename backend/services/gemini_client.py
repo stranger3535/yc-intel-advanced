@@ -9,7 +9,8 @@ def generate_answer(prompt: str) -> str:
         return "LLM is disabled. Please configure GEMINI_API_KEY."
 
     genai.configure(api_key=GEMINI_API_KEY)
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model="models/gemini-1.5-pro"
+
 
     response = model.generate_content(prompt)
     return response.text
