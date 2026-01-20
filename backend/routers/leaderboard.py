@@ -1,57 +1,51 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
 from psycopg2.extras import RealDictCursor
-from db import get_db
+from backend.db import get_db
 
-router = APIRouter()
+router = APIRouter(prefix="/leaderboard", tags=["Leaderboard"])
 
-@router.get("/", tags=["Leaderboard"])
+
+@router.get("")
 def leaderboard(db=Depends(get_db)):
+    if db is None:
+        raise HTTPException(status_code=500, detail="Database not connected")
+
     cur = db.cursor(cursor_factory=RealDictCursor)
 
     try:
-        # --- Top momentum companies ---
+        # Top momentum companies
         cur.execute("""
-            SELECT
-                c.id,
-                c.name,
-                sc.momentum_score
-            FROM company_scores sc
-            JOIN companies c ON c.id = sc.company_id
-            ORDER BY sc.momentum_score DESC
+            SELECT c.name, s.momentum_score
+            FROM company_scores s
+            JOIN companies c ON c.id = s.company_id
+            ORDER BY s.momentum_score DESC
             LIMIT 10
         """)
         top_momentum = cur.fetchall()
 
-        # --- Most stable companies ---
+        # Most stable companies
         cur.execute("""
-            SELECT
-                c.id,
-                c.name,
-                sc.stability_score
-            FROM company_scores sc
-            JOIN companies c ON c.id = sc.company_id
-            ORDER BY sc.stability_score DESC
+            SELECT c.name, s.stability_score
+            FROM company_scores s
+            JOIN companies c ON c.id = s.company_id
+            ORDER BY s.stability_score DESC
             LIMIT 10
         """)
-        top_stable = cur.fetchall()
+        most_stable = cur.fetchall()
 
-        # --- Recently changed companies ---
+        # Recent changes
         cur.execute("""
-            SELECT
-                c.id,
-                c.name,
-                MAX(cc.detected_at) AS last_change
-            FROM company_changes cc
-            JOIN companies c ON c.id = cc.company_id
-            GROUP BY c.id, c.name
-            ORDER BY last_change DESC
+            SELECT c.name, ch.change_type, ch.detected_at
+            FROM company_changes ch
+            JOIN companies c ON c.id = ch.company_id
+            ORDER BY ch.detected_at DESC
             LIMIT 10
         """)
         recent_changes = cur.fetchall()
 
         return {
             "top_momentum": top_momentum,
-            "top_stable": top_stable,
+            "most_stable": most_stable,
             "recent_changes": recent_changes
         }
 

@@ -1,63 +1,32 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
 from psycopg2.extras import RealDictCursor
-from db import get_db
-from fastapi import APIRouter
-from services.trend_engine import get_trends_service
+from backend.db import get_db
 
-router = APIRouter()
+router = APIRouter(prefix="/api/trends", tags=["Trends"])
 
 
-@router.get("/trends")
+@router.get("")
 def trends(db=Depends(get_db)):
+    if db is None:
+        raise HTTPException(status_code=500, detail="Database not connected")
+
     cur = db.cursor(cursor_factory=RealDictCursor)
 
-    # ----------------------
-    # Top growing tags
-    # ----------------------
-    cur.execute("""
-        SELECT
-            tag,
-            COUNT(*) AS count
-        FROM company_snapshots,
-             LATERAL jsonb_array_elements_text(tags) AS tag
-        GROUP BY tag
-        ORDER BY count DESC
-        LIMIT 10
-    """)
-    top_tags = cur.fetchall()
+    try:
+        # 🔹 Trend = most common tags across companies
+        cur.execute("""
+            SELECT
+                tag AS category,
+                COUNT(*) AS count
+            FROM company_snapshots,
+                 LATERAL jsonb_array_elements_text(tags) AS tag
+            GROUP BY tag
+            ORDER BY count DESC
+            LIMIT 20
+        """)
 
-    # ----------------------
-    # Top locations
-    # ----------------------
-    cur.execute("""
-        SELECT
-            location,
-            COUNT(*) AS count
-        FROM company_snapshots
-        WHERE location IS NOT NULL AND location <> ''
-        GROUP BY location
-        ORDER BY count DESC
-        LIMIT 10
-    """)
-    top_locations = cur.fetchall()
+        return cur.fetchall()   # ✅ RETURNS ARRAY
 
-    # ----------------------
-    # Stage / change trends
-    # ----------------------
-    cur.execute("""
-        SELECT
-            change_type,
-            COUNT(*) AS count
-        FROM company_changes
-        GROUP BY change_type
-        ORDER BY count DESC
-    """)
-    stage_transitions = cur.fetchall()
-
-    cur.close()
-
-    return {
-        "top_tags": top_tags,
-        "top_locations": top_locations,
-        "stage_transitions": stage_transitions
-    }
+    finally:
+        cur.close()
+        db.close()
