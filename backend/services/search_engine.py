@@ -1,4 +1,4 @@
-from db import get_db
+from backend.db import get_db
 
 def search_companies_service(q: str, limit: int, sort: str):
     conn = get_db()

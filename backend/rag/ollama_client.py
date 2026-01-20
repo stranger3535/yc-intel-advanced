@@ -1,19 +1,22 @@
-import subprocess
+import os
+import requests
 
-def ask_llama(prompt: str) -> str:
-    process = subprocess.Popen(
-        ["ollama", "run", "llama3"],
-        stdin=subprocess.PIPE,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        text=True,
-        encoding="utf-8",     # ✅ FIX
-        errors="ignore"       # ✅ FIX
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3")
+
+
+def generate_answer(prompt: str) -> str:
+    payload = {
+        "model": OLLAMA_MODEL,
+        "prompt": prompt,
+        "stream": False
+    }
+
+    response = requests.post(
+        f"{OLLAMA_URL}/api/generate",
+        json=payload,
+        timeout=120
     )
 
-    stdout, stderr = process.communicate(prompt)
-
-    if stderr:
-        return "LLM error occurred"
-
-    return stdout.strip()
+    response.raise_for_status()
+    return response.json()["response"]

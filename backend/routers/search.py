@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, Query
 from psycopg2.extras import RealDictCursor
-from db import get_db
-from services.search_engine import search_companies_service
+from backend.db import get_db
+from backend.services.search_engine import search_companies_service
 
 
 router = APIRouter()
@@ -11,7 +11,7 @@ def search_companies(
     q: str = Query(..., min_length=2, description="Search keywords"),
     page: int = Query(1, ge=1),
     limit: int = Query(20, ge=1, le=50),
-    sort: str = Query("relevance", regex="^(relevance|momentum)$"),
+    sort: str = Query("relevance", pattern="^(relevance|momentum)$"),
     db=Depends(get_db)
 ):
     offset = (page - 1) * limit

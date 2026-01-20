@@ -1,38 +1,29 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-import os
-import google.generativeai as genai
+from fastapi.concurrency import run_in_threadpool
+from backend.rag.ollama_client import generate_answer
 
-router = APIRouter(prefix="/api/chat", tags=["Chat"])
+router = APIRouter(tags=["Chat"])
+
 
 class ChatRequest(BaseModel):
     question: str
 
+
 class ChatResponse(BaseModel):
     answer: str
 
+
 @router.post("/", response_model=ChatResponse)
-def chat(req: ChatRequest):
+async def chat(req: ChatRequest):
     question = req.question.strip()
+
     if not question:
         raise HTTPException(status_code=400, detail="Question cannot be empty")
 
-    api_key = os.getenv("GEMINI_API_KEY")
-    if not api_key:
-        return {
-            "answer": "Gemini API key is not configured on the server."
-        }
-
-    genai.configure(api_key=api_key)
-
-    model = genai.GenerativeModel("gemini-1.5-flash")
-
     try:
-        response = model.generate_content(question)
-        return {
-            "answer": response.text or "No response generated."
-        }
+        # ✅ NON-BLOCKING
+        answer = await run_in_threadpool(generate_answer, question)
+        return {"answer": answer}
     except Exception as e:
-        return {
-            "answer": f"Gemini error: {str(e)}"
-        }
+        raise HTTPException(status_code=500, detail=str(e))

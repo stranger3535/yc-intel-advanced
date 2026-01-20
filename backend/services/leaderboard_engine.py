@@ -1,7 +1,6 @@
-# backend/services/leaderboard_engine.py
 
-from db import get_db
 
+from backend.db import get_db
 
 def get_leaderboard_service():
     db = get_db()
@@ -15,5 +14,17 @@ def get_leaderboard_service():
         LIMIT 10
     """)
 
-    data = cur.fetchall()
-    return data
+    rows = cur.fetchall()
+
+    # ✅ convert tuples → JSON-friendly dicts
+    result = [
+        {
+            "name": r[0],
+            "momentum_score": r[1]
+        }
+        for r in rows
+    ]
+
+    cur.close()
+    db.close()
+    return result
