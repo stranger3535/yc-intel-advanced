@@ -16,7 +16,7 @@ def get_leaderboard_service():
 
     rows = cur.fetchall()
 
-    # ✅ convert tuples → JSON-friendly dicts
+    # convert tuples → JSON-friendly dicts
     result = [
         {
             "name": r[0],

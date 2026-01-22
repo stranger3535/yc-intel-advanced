@@ -22,7 +22,7 @@ async def chat(req: ChatRequest):
         raise HTTPException(status_code=400, detail="Question cannot be empty")
 
     try:
-        # ✅ NON-BLOCKING
+    
         answer = await run_in_threadpool(generate_answer, question)
         return {"answer": answer}
     except Exception as e:

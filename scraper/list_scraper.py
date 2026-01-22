@@ -5,7 +5,7 @@ import requests
 from dotenv import load_dotenv
 import psycopg2
 from psycopg2.extras import RealDictCursor
-from bs4 import BeautifulSoup  # NEW
+from bs4 import BeautifulSoup 
 
 # Logging
 logging.basicConfig(

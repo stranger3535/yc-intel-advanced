@@ -1,8 +1,7 @@
-# backend/services/chat_engine.py
-
 from services.search_engine import search_companies_service
 from services.trend_engine import get_trends_service
 from services.leaderboard_engine import get_leaderboard_service
+from rag.rag_pipeline import answer_question as rag_answer_question
 
 
 def answer_question(question: str):
@@ -30,7 +29,8 @@ def answer_question(question: str):
             )
         }
 
+   
     return {
-        "intent": "unknown",
-        "message": "Ask about companies, trends, or rankings."
+        "intent": "rag",
+        "data": rag_answer_question(question)
     }

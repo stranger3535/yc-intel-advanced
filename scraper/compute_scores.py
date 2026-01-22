@@ -4,7 +4,7 @@ from datetime import datetime, timedelta, timezone
 from dotenv import load_dotenv
 from collections import defaultdict
 
-# -------------------- Setup --------------------
+
 load_dotenv()
 
 DB_URL = os.getenv("NEON_DATABASE_URL") or os.getenv("DATABASE_URL")
@@ -12,11 +12,15 @@ if not DB_URL:
     raise RuntimeError("DATABASE_URL / NEON_DATABASE_URL not set")
 
 NOW = datetime.now(timezone.utc)
+
+DAYS_30 = NOW - timedelta(days=30)
 DAYS_90 = NOW - timedelta(days=90)
 DAYS_180 = NOW - timedelta(days=180)
+DAYS_365 = NOW - timedelta(days=365)
 
 BATCH_SIZE = 500
 PROGRESS_EVERY = 100
+
 
 
 def ensure_company_scores_schema(cur):
@@ -39,64 +43,100 @@ def compute_scores():
     ensure_company_scores_schema(cur)
     conn.commit()
 
-    # Fetch all companies FIRST
+    # Fetch all companies
     cur.execute("SELECT id FROM companies ORDER BY id")
-    all_company_ids = [r[0] for r in cur.fetchall()]
-    total_companies = len(all_company_ids)
+    company_ids = [r[0] for r in cur.fetchall()]
+    total = len(company_ids)
 
-    print(f"Total companies to score: {total_companies}")
+    print(f"Scoring {total} companies")
 
-    # Fetch all changes ONCE
-    print("Fetching all changes in one query...")
+    # Fetch all changes once
     cur.execute("""
         SELECT company_id, change_type, detected_at
         FROM company_changes
+        WHERE detected_at IS NOT NULL
     """)
     rows = cur.fetchall()
 
     changes_by_company = defaultdict(list)
 
-    for company_id, change_type, detected_at in rows:
-        if detected_at is None:
-            continue
-        if detected_at.tzinfo is None:
-            detected_at = detected_at.replace(tzinfo=timezone.utc)
-        changes_by_company[company_id].append((change_type, detected_at))
+    for cid, ctype, ts in rows:
+        if ts.tzinfo is None:
+            ts = ts.replace(tzinfo=timezone.utc)
+        changes_by_company[cid].append((ctype, ts))
 
-    print(f"Found changes for {len(changes_by_company)} companies")
-    print("Starting scoring loop...\n")
-
-    processed = 0
+    print(f"Found change data for {len(changes_by_company)} companies")
 
     # -------------------- Scoring Loop --------------------
-    for idx, company_id in enumerate(all_company_ids, start=1):
-        momentum = 0
-        stability = 0
+    for idx, company_id in enumerate(company_ids, start=1):
+
         changes = changes_by_company.get(company_id, [])
 
-        # ---------- Momentum ----------
+        momentum = 0
+        stability = 0
+
+        # -------------------- Momentum --------------------
         for change_type, detected_at in changes:
-            if detected_at >= DAYS_90:
-                momentum += 5
-                if change_type == "STAGE_CHANGE":
-                    momentum += 10
-                elif change_type == "BATCH_CHANGE":
-                    momentum += 3
 
-        # ---------- Stability ----------
-        if not any(d >= DAYS_180 for _, d in changes):
-            stability += 20
+            # Recency weighting
+            if detected_at >= DAYS_30:
+                base = 10
+            elif detected_at >= DAYS_90:
+                base = 6
+            elif detected_at >= DAYS_180:
+                base = 3
+            elif detected_at >= DAYS_365:
+                base = 1
+            else:
+                base = 0
 
-        if changes and all(c[0] == "LOCATION_CHANGE" for c in changes):
-            stability += 10
+            # Change type weight
+            if change_type == "STAGE_CHANGE":
+                momentum += base + 10
+            elif change_type == "BATCH_CHANGE":
+                momentum += base + 6
+            elif change_type == "WEBSITE_CHANGE":
+                momentum += base + 4
+            elif change_type == "TAG_CHANGE":
+                momentum += base + 3
+            elif change_type == "DESCRIPTION_CHANGE":
+                momentum += base + 2
+            elif change_type == "LOCATION_CHANGE":
+                momentum += base + 1
+            else:
+                momentum += base
 
-        desc_changes = sum(
-            1 for c in changes if c[0] == "DESCRIPTION_CHANGE"
-        )
-        if desc_changes >= 3:
-            stability -= 10
+        # Small baseline to avoid mass zero scores
+        if momentum == 0 and changes:
+            momentum = 2
 
-        # ---------- Upsert ----------
+        # -------------------- Stability --------------------
+        if not changes:
+            stability = 25  # completely unchanged company
+        else:
+            recent_changes = sum(1 for _, d in changes if d >= DAYS_90)
+
+            if recent_changes == 0:
+                stability += 20
+            elif recent_changes <= 2:
+                stability += 10
+            else:
+                stability -= 5
+
+            # Penalize excessive churn
+            desc_changes = sum(1 for c, _ in changes if c == "DESCRIPTION_CHANGE")
+            if desc_changes >= 3:
+                stability -= 5
+
+            loc_changes = sum(1 for c, _ in changes if c == "LOCATION_CHANGE")
+            if loc_changes >= 2:
+                stability -= 5
+
+        # Clamp values
+        momentum = max(0, min(momentum, 100))
+        stability = max(0, min(stability, 100))
+
+        # -------------------- Upsert --------------------
         cur.execute("""
             INSERT INTO company_scores
                 (company_id, momentum_score, stability_score, last_updated)
@@ -108,21 +148,18 @@ def compute_scores():
                 last_updated = EXCLUDED.last_updated
         """, (company_id, momentum, stability, NOW))
 
-        processed += 1
-
-        # Progress logs
         if idx % PROGRESS_EVERY == 0:
-            print(f"Processing {idx}/{total_companies}...")
+            print(f"Processed {idx}/{total}")
 
-        if processed % BATCH_SIZE == 0:
+        if idx % BATCH_SIZE == 0:
             conn.commit()
-            print(f"Committed {processed}/{total_companies}")
+            print(f"Committed {idx}/{total}")
 
     conn.commit()
     cur.close()
     conn.close()
 
-    print(f"\n✓ Company scoring completed successfully for {total_companies} companies")
+    print("✓ Company scoring completed successfully")
 
 
 # -------------------- Entry --------------------

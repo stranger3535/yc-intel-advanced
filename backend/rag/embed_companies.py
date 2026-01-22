@@ -5,13 +5,11 @@ import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-# ------------------ FIX IMPORT PATH ------------------
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 sys.path.insert(0, PROJECT_ROOT)
 
 from backend.db import get_db
 
-# ------------------ CONFIG ------------------
 INDEX_PATH = "backend/rag/vector_store.faiss"
 META_PATH = "backend/rag/metadata.json"
 
@@ -21,7 +19,7 @@ def main():
     db = get_db()
     cur = db.cursor()
 
-    # ✅ IMPORTANT: use ONLY latest snapshot per company
+    #  snapshot per company
     cur.execute("""
         SELECT DISTINCT ON (c.id)
             c.id,
@@ -50,7 +48,10 @@ Description: {r[2]}
         texts.append(text.strip())
         metadata.append({
             "company_id": r[0],
-            "name": r[1]
+            "name": r[1],
+            "location": r[3],
+            "tags": r[4],
+            "description": r[2],
         })
 
     print(f"Embedding {len(texts)} companies...")
@@ -69,7 +70,7 @@ Description: {r[2]}
     cur.close()
     db.close()
 
-    print(f"✅ Embedded {len(texts)} companies successfully")
+    print(f" Embedded {len(texts)} companies successfully")
 
 if __name__ == "__main__":
     main()

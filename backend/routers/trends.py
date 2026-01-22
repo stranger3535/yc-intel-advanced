@@ -13,7 +13,7 @@ def trends(db=Depends(get_db)):
     cur = db.cursor(cursor_factory=RealDictCursor)
 
     try:
-        # 🔹 Trend = most common tags across companies
+        #  Trend = most common tags across companies
         cur.execute("""
             SELECT
                 tag AS category,
@@ -25,7 +25,7 @@ def trends(db=Depends(get_db)):
             LIMIT 20
         """)
 
-        return cur.fetchall()   # ✅ RETURNS ARRAY
+        return cur.fetchall()   #  RETURNS ARRAY
 
     finally:
         cur.close()

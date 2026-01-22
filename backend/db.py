@@ -4,15 +4,13 @@ from fastapi import HTTPException
 from dotenv import load_dotenv
 from pathlib import Path
 
-# --------------------------------------------------
 # Explicitly load backend/.env
-# --------------------------------------------------
+
 ENV_PATH = Path(__file__).resolve().parent / ".env"
 load_dotenv(dotenv_path=ENV_PATH)
 
-# --------------------------------------------------
 # Read database URL
-# --------------------------------------------------
+
 DATABASE_URL = os.getenv("NEON_DATABASE_URL") or os.getenv("DATABASE_URL")
 
 

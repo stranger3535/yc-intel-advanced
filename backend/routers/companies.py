@@ -7,9 +7,9 @@ router = APIRouter(
     tags=["Companies"]
 )
 
-# =========================
+
 # LIST COMPANIES
-# =========================
+
 @router.get("")
 def list_companies(db=Depends(get_db)):
     cur = db.cursor(cursor_factory=RealDictCursor)
@@ -36,9 +36,9 @@ def list_companies(db=Depends(get_db)):
         db.close()
 
 
-# =========================
+
 # COMPANY DETAIL
-# =========================
+
 @router.get("/{company_id}")
 def company_detail(company_id: int, db=Depends(get_db)):
     cur = db.cursor(cursor_factory=RealDictCursor)
