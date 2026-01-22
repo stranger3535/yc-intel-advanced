@@ -1,4 +1,4 @@
-/* ===== GLOBAL RESET ===== */
+/* GLOBAL RESET */
 * {
   box-sizing: border-box;
 }
@@ -11,7 +11,7 @@ body {
   color: #e5e7eb;
 }
 
-/* ===== LAYOUT ===== */
+/* LAYOUT  */
 main {
   display: flex;
   justify-content: center;
@@ -23,14 +23,14 @@ main {
   max-width: 900px;
 }
 
-/* ===== HEADINGS ===== */
+/* HEADINGS  */
 h1 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #38bdf8;
 }
 
-/* ===== TABLE ===== */
+/* TABLE */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -56,7 +56,7 @@ tr:hover td {
   background: #020617;
 }
 
-/* ===== CHAT UI ===== */
+/* CHAT UI */
 .chat-box {
   background: #020617;
   padding: 20px;
@@ -105,7 +105,7 @@ tr:hover td {
   font-style: italic;
 }
 
-/* ===== INPUT ===== */
+/* INPUT */
 .input-row {
   display: flex;
   gap: 8px;

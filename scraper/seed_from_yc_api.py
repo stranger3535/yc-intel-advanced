@@ -10,9 +10,9 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 from dotenv import load_dotenv
 
-# -----------------------------
+
 # Config & Logging
-# -----------------------------
+
 
 logging.basicConfig(
     level=logging.INFO,
@@ -30,9 +30,9 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 YC_ALL_COMPANIES_URL = "https://yc-oss.github.io/api/companies/all.json"
 
 
-# -----------------------------
+
 # Utils
-# -----------------------------
+
 
 def safe_text(value):
     if not value:
@@ -49,9 +49,9 @@ def compute_snapshot_hash(data: dict) -> str:
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
-# -----------------------------
+
 # DB Helpers
-# -----------------------------
+
 
 def get_db_conn():
     if not DATABASE_URL:
@@ -59,9 +59,9 @@ def get_db_conn():
     return psycopg2.connect(DATABASE_URL)
 
 
-# -----------------------------
+
 # Seeding Logic
-# -----------------------------
+
 
 def fetch_all_companies():
     logger.info("Fetching all YC companies from YC-OSS API")

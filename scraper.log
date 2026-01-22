@@ -209,3 +209,5 @@ AttributeError: 'JSHandle' object has no attribute 'inner_text'
 2026-01-11 15:14:41,352 - INFO - Unchanged: 0
 2026-01-11 15:14:41,353 - INFO - Failed: 10
 2026-01-11 15:14:41,353 - INFO - Runtime: 66.40s
+2026-01-22 20:17:51,467 - INFO - Found 0 companies
+2026-01-22 21:26:33,694 - INFO - Scrape finished in 4124.75s

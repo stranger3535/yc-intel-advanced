@@ -45,7 +45,7 @@ def main():
     print(f"Fetched {len(rows)} rows")
 
     if not rows:
-        print("❌ No valid rows found. Exiting.")
+        print(" No valid rows found. Exiting.")
         return
 
     # --- Write JSONL ---
@@ -75,7 +75,7 @@ def main():
     cur.close()
     db.close()
 
-    print(f"✅ Fine-tuning dataset created at:\n{OUTPUT_PATH}")
+    print(f" Fine-tuning dataset created at:\n{OUTPUT_PATH}")
 
 
 if __name__ == "__main__":

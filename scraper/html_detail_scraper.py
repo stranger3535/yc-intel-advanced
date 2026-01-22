@@ -9,9 +9,8 @@ import psycopg2
 from dotenv import load_dotenv
 from playwright.sync_api import sync_playwright
 
-# -----------------------------
 # Config & Logging
-# -----------------------------
+
 
 logging.basicConfig(
     level=logging.INFO,
@@ -27,9 +26,8 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
 
-# -----------------------------
 # Helpers
-# -----------------------------
+
 
 def compute_snapshot_hash(data: dict) -> str:
     payload = json.dumps(
@@ -43,9 +41,8 @@ def compute_snapshot_hash(data: dict) -> str:
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
-# -----------------------------
 # DB helpers
-# -----------------------------
+
 
 def get_db_conn():
     return psycopg2.connect(DATABASE_URL)
@@ -80,9 +77,8 @@ def get_latest_snapshot_hash(cur, company_id):
     return row[0] if row else None
 
 
-# -----------------------------
 # Playwright scraper
-# -----------------------------
+
 
 def scrape_company_page(page, slug):
     url = f"https://www.ycombinator.com/companies/{slug}"
@@ -129,9 +125,8 @@ def scrape_company_page(page, slug):
     }
 
 
-# -----------------------------
 # Main runner
-# -----------------------------
+
 
 def run(limit=10):
     start_time = time.time()
@@ -225,6 +220,19 @@ def run(limit=10):
     logger.info(f"Unchanged: {unchanged}")
     logger.info(f"Failed: {failed}")
     logger.info(f"Runtime: {elapsed:.2f}s")
+
+def scrape_company_detail(company):
+    """
+    Adapter so main.py does not need to change.
+    """
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page()
+
+        data = scrape_company_page(page, company["slug"])
+
+        browser.close()
+        return data
 
 
 if __name__ == "__main__":

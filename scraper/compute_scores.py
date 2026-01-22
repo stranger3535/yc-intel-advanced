@@ -35,7 +35,7 @@ def ensure_company_scores_schema(cur):
     """)
 
 
-# -------------------- Main Logic --------------------
+# Main Logic 
 def compute_scores():
     conn = psycopg2.connect(DB_URL)
     cur = conn.cursor()
@@ -67,7 +67,7 @@ def compute_scores():
 
     print(f"Found change data for {len(changes_by_company)} companies")
 
-    # -------------------- Scoring Loop --------------------
+    # Scoring Loop
     for idx, company_id in enumerate(company_ids, start=1):
 
         changes = changes_by_company.get(company_id, [])
@@ -75,7 +75,7 @@ def compute_scores():
         momentum = 0
         stability = 0
 
-        # -------------------- Momentum --------------------
+        #  Momentum 
         for change_type, detected_at in changes:
 
             # Recency weighting
@@ -110,7 +110,7 @@ def compute_scores():
         if momentum == 0 and changes:
             momentum = 2
 
-        # -------------------- Stability --------------------
+        # Stability 
         if not changes:
             stability = 25  # completely unchanged company
         else:
@@ -136,7 +136,7 @@ def compute_scores():
         momentum = max(0, min(momentum, 100))
         stability = max(0, min(stability, 100))
 
-        # -------------------- Upsert --------------------
+        #  Upsert 
         cur.execute("""
             INSERT INTO company_scores
                 (company_id, momentum_score, stability_score, last_updated)
@@ -161,7 +161,13 @@ def compute_scores():
 
     print("✓ Company scoring completed successfully")
 
+def compute_company_scores(cur=None):
+    """
+    Adapter for main.py.
+    If cursor is not provided, open a new connection.
+    """
+    compute_scores()
 
-# -------------------- Entry --------------------
+# Entry 
 if __name__ == "__main__":
     compute_scores()

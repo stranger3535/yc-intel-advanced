@@ -23,8 +23,8 @@ def fetch_companies_page(page):
     return resp.text
 
 def parse_companies(html):
-    # TEMP: just return empty list; next step we wire BeautifulSoup
-    # so we can focus on DB upsert first.
+    # just return empty list; next wire BeautifulSoup
+    # DB upsert 
     return []
 
 def upsert_company(cur, yc_company_id, name, domain=None, founded_year=None):

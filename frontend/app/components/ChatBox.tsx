@@ -41,7 +41,7 @@ export default function ChatBox() {
         ...prev,
         {
           role: "bot",
-          text: "⚠️ Backend not reachable. Is FastAPI running?",
+          text: " Backend not reachable. Is FastAPI running?",
         },
       ]);
     } finally {

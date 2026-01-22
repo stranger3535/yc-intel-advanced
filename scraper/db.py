@@ -1,4 +1,24 @@
+import os
 from datetime import datetime, timezone
+
+import psycopg2
+from dotenv import load_dotenv
+
+load_dotenv()
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+
+
+# DB CONNECTION
+
+def get_conn():
+    if not DATABASE_URL:
+        raise RuntimeError("DATABASE_URL not set")
+    return psycopg2.connect(DATABASE_URL)
+
+
+# SCRAPE RUN TRACKING
 
 def start_scrape_run(cur):
     cur.execute("""

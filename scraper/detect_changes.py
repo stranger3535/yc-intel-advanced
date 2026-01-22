@@ -53,6 +53,14 @@ def detect_changes():
     conn.close()
 
     print("✓ Change detection completed")
+    
+def detect_and_store_changes(cur, snapshot):
+    """
+    Adapter for main.py.
+    For now, reuse detect_changes logic later.
+    """
+    # TEMP: do nothing, return "unchanged"
+    return "unchanged"
 
 if __name__ == "__main__":
     detect_changes()

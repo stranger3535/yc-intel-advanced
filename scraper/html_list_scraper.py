@@ -42,7 +42,7 @@ def fetch_company_urls():
 
 if __name__ == "__main__":
     urls = fetch_company_urls()
-    print(f"\n✅ Total company URLs found: {len(urls)}")
+    print(f"\n Total company URLs found: {len(urls)}")
 
     for u in urls[:5]:
         print(u)

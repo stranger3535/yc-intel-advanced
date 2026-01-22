@@ -85,9 +85,9 @@ export default function CompaniesPage() {
   );
 }
 
-/* =========================
-   Styles (NO Tailwind)
-========================= */
+
+//  Styles (NO Tailwind)
+
 
 const styles: { [key: string]: React.CSSProperties } = {
   main: {

@@ -53,7 +53,7 @@ def export_data():
     cur.close()
     db.close()
 
-    print(f"✅ Clean dataset created at: {output_path}")
+    print(f" Clean dataset created at: {output_path}")
 
 
 if __name__ == "__main__":
